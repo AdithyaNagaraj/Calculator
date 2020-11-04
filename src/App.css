@@ -66,14 +66,14 @@
 .screen-top{
   flex: 1;
   font-size: 40px;
-  width: 90%;
+  width: 94%;
   align-self: flex-end;
 }
 
 .screen-bottom{
   flex: 2;
   font-size: 80px;
-  width: 80%;
+  width: 94%;
   align-self: flex-end;
   /* font-size: 80px !important; */
 }
