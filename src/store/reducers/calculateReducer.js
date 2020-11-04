@@ -49,7 +49,7 @@ export default (state = initialState, action) => {
       }  
     
     case types.NEGATE_TOTAL:  
-      arr = handyFunctionNegate( state.total )
+      arr = handyFunctionNegate( state.expression, state.total )
       expression = arr[0]
       tot = arr[1]
       return {
@@ -62,12 +62,16 @@ export default (state = initialState, action) => {
   }
 }
 
-const handyFunctionNegate = ( total ) => {
+const handyFunctionNegate = ( exp, total ) => {
   var expression 
   var tot  
-  
+  if(exp.length > 1){
     tot = -1 * calculate(total)
     expression = -1 * calculate(total)
+  }else{
+    tot = -1 *  parseFloat(exp)
+    expression = -1 * parseFloat(exp)
+  }
   const arr = [ expression , tot]
   return arr;
 }
